@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/HibernateConfigurationDTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hbm2ddl.auto">create</property><!--Crear un nuevo-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property><!--Como nos comunicamoc (lenguaje sql)-->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property><!--Como nos conectamos-->
+
+        <property name="connection.url">127.0.0.1:3306/m06</property><!--direccion bbdd-->
+        <property name="connection.username">root</property><!--nombre de usuario-->
+        <property name="connection.password">ThePassword</property><!--contraseña-->
+
+<!--    <property name="connection.url">127.0.0.1:3309</property>&lt;!&ndash;direccion bbdd&ndash;&gt;
+        <property name="connection.username">Daniel</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
+        <property name="connection.password">familia</property>&lt;!&ndash;contraseña&ndash;&gt;-->
+
+        <property name="hibernate.show_sql">true</property><!--Que nos muestre lo que se esta realizando-->
+
+        <mapping resource="alumno.hbm.xml"/> <!--ESTO ES LA TABLA ALUMNO-->
+        <mapping resource="modulo.hbm.xml"/> <!--ESTO ES LA TABLA MODULO-->
+        <mapping resource="profesor.hbm.xml"/> <!--ESTO ES LA TABLA PROFESOR-->
+
+
+    </session-factory>
+</hibernate-configuration>
