@@ -13,7 +13,7 @@
         <property name="connection.username">root</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
         <property name="connection.password">ThePassword</property>&lt;!&ndash;contraseña&ndash;&gt;-->
 
-        <property name="connection.url">127.0.0.1:3309</property><!--direccion bbdd-->
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3309</property><!--direccion bbdd-->
         <property name="connection.username">nombre_alumno</property><!--nombre de usuario-->
         <property name="connection.password">familia</property><!--contraseña-->
 
