@@ -8,12 +8,12 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property><!--Como nos comunicamoc (lenguaje sql)-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property><!--Como nos conectamos-->
 
-        <property name="connection.url">127.0.0.1:3306/m06</property><!--direccion bbdd-->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/m06</property>
         <property name="connection.username">root</property><!--nombre de usuario-->
         <property name="connection.password">ThePassword</property><!--contraseña-->
 
 <!--    <property name="connection.url">127.0.0.1:3309</property>&lt;!&ndash;direccion bbdd&ndash;&gt;
-        <property name="connection.username">Daniel</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
+        <property name="connection.username">nombre_alumno</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
         <property name="connection.password">familia</property>&lt;!&ndash;contraseña&ndash;&gt;-->
 
         <property name="hibernate.show_sql">true</property><!--Que nos muestre lo que se esta realizando-->

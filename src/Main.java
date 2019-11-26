@@ -10,10 +10,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args){
+
         Configuration cfg = new Configuration().configure();
         SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
+
+
        //Modulo
         Modulo modulo6 = new Modulo();
         modulo6.setNombre("M06");
@@ -32,15 +35,16 @@ public class Main {
         alumno1.setModulos(listModulo);
         session.save(alumno1);
 
-
         //Profesor
         Profesor profesor1 = new Profesor();
         profesor1.setNombre("Patricio Cinco Puntas");
         profesor1.setSexo("Masculino");
         session.save(profesor1);
 
-        //Imprimimos el Alumno en un fichero
-        FicheroObj.fileOutputStream(profesor1,"Alumno_1");
+        //Imprimimos los objetos en un fichero
+        FicheroObj.fileOutputStream(alumno1,"Alumno_1");
+        FicheroObj.fileOutputStream(profesor1,"profesor_1");
+        FicheroObj.fileOutputStream(modulo6,"modulo_6");
 
         tx.commit();
         session.close();

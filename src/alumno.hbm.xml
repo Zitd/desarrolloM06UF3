@@ -3,16 +3,23 @@
         "-//Hibernate/HibernateMappingDTD5.3//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="src.Alumno" table="Alumnos" >
-        <id name="idAlumno">
+    <class name="Alumno" table="Alumnos" >
+        <id name="id">
             <column name="alumno_id"/>
             <generator class="assigned"></generator>
         </id>
+
+        <list name = "modulos" cascade="all">
+            <key column = "id"/>
+            <list-index column = "idx"/>
+            <one-to-many class="Modulo"/>
+        </list>
+
         <property name="nombre"></property>
         <property name="nacionalidad"></property>
         <property name="edad"></property>
         <property name="sexo"></property>
-        <property name="modulos"></property>
+
 
     </class>
 </hibernate-mapping>
