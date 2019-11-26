@@ -16,7 +16,6 @@ public class Main {
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
 
-
        //Modulo
         Modulo modulo6 = new Modulo();
         modulo6.setNombre("M06");
@@ -24,7 +23,6 @@ public class Main {
         List<Modulo> listModulo = new ArrayList<Modulo>();
         listModulo.add(modulo6);
         session.save(modulo6);
-
 
         //Alumno
         Alumno alumno1 = new Alumno();
@@ -50,7 +48,5 @@ public class Main {
         session.close();
         sessionFactory.close();
     }
-
-
 
 }

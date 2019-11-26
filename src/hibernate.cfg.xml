@@ -4,19 +4,20 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hbm2ddl.auto">create</property><!--Crear un nuevo-->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property><!--Como nos comunicamoc (lenguaje sql)-->
+        <property name="hbm2ddl.auto">create</property><!--Crear de nuevo-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property><!--Como nos comunicamos (lenguaje sql)-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property><!--Como nos conectamos-->
 
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/m06</property>
-        <property name="connection.username">root</property><!--nombre de usuario-->
-        <property name="connection.password">ThePassword</property><!--contraseña-->
+        <!--TESTS-->
+<!--    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/m06</property>
+        <property name="connection.username">root</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
+        <property name="connection.password">ThePassword</property>&lt;!&ndash;contraseña&ndash;&gt;-->
 
-<!--    <property name="connection.url">127.0.0.1:3309</property>&lt;!&ndash;direccion bbdd&ndash;&gt;
-        <property name="connection.username">nombre_alumno</property>&lt;!&ndash;nombre de usuario&ndash;&gt;
-        <property name="connection.password">familia</property>&lt;!&ndash;contraseña&ndash;&gt;-->
+        <property name="connection.url">127.0.0.1:3309</property><!--direccion bbdd-->
+        <property name="connection.username">nombre_alumno</property><!--nombre de usuario-->
+        <property name="connection.password">familia</property><!--contraseña-->
 
-        <property name="hibernate.show_sql">true</property><!--Que nos muestre lo que se esta realizando-->
+        <property name="hibernate.show_sql">true</property><!--Que nos muestre lo que se está realizando-->
 
         <mapping resource="alumno.hbm.xml"/> <!--ESTO ES LA TABLA ALUMNO-->
         <mapping resource="modulo.hbm.xml"/> <!--ESTO ES LA TABLA MODULO-->

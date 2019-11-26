@@ -19,9 +19,7 @@
         <property name="nacionalidad"></property>
         <property name="edad"></property>
         <property name="sexo"></property>
-<!--
-        <property name="modulos"></property>
--->
+
 
     </class>
 </hibernate-mapping>
